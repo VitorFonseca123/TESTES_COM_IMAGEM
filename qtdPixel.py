@@ -4,7 +4,7 @@ import numpy as np
 def contar_pixels_figura(caminho_imagem):
     
     imagem = Image.open(caminho_imagem).convert("L")
-    QL, QC = imagem.size
+    QC, QL = imagem.size # QC = largura, QL = altura
     total_pixels = QL * QC
     figura_pixels = 0
     imagem = np.asarray(imagem)

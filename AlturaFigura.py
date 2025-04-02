@@ -4,11 +4,11 @@ import numpy as np
 def AlturaDaFigura(caminho_imagem):
     
     imagem = Image.open(caminho_imagem).convert("L")
-    QL, QC = imagem.size
+    QC, QL = imagem.size # QC = largura, QL = altura
     total_pixels = QL * QC
     alturaPixels = 0
     imagem = np.asarray(imagem)
-    
+    print("Total de pixels da altura ", QL)
     #print(imagem)
     for i in range(QL):
         for j in range(QC):
